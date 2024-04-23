@@ -3,7 +3,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import { useEffect, useState } from "react";
 import { fetchArticles } from "../../api-articles";
 import ImageGallery from "../ImageGallery/ImageGallery";
-import LoadeMoreBtn from "../LoadMoreBtn/LoadeMoreBtn";
+import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
 import Loader from "../Loader/Loader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import ImageModal from "../ImageModal/ImageModal";
@@ -40,7 +40,6 @@ export default function App() {
           return [...prevArticles, ...data.results];
         });
       } catch (error) {
-        setIsloading(false);
         setError(true);
       } finally {
         setIsloading(false);
@@ -70,7 +69,7 @@ export default function App() {
       )}
       {isloading && <Loader />}
       {articles.length > 0 && !isloading && articles.length < total && (
-        <LoadeMoreBtn page={page} setPage={setPage} text="Loade More" />
+        <LoadMoreBtn onLoadMore={() => setPage(page + 1)} text="Load More" />
       )}
       <ImageModal
         isOpen={modalIsOpen}
