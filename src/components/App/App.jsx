@@ -3,7 +3,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import { useEffect, useState } from "react";
 import { fetchArticles } from "../../api-articles";
 import ImageGallery from "../ImageGallery/ImageGallery";
-import LoadeMoreBtn from "../LoadeMoreBtn/LoadeMoreBtn";
+import LoadeMoreBtn from "../LoadMoreBtn/LoadeMoreBtn";
 import Loader from "../Loader/Loader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import ImageModal from "../ImageModal/ImageModal";
