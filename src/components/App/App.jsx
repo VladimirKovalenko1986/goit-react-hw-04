@@ -14,11 +14,11 @@ export default function App() {
   const [error, setError] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(null);
+  const [currentLikes, setCurrentLikes] = useState(0);
 
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
   const [query, setQuery] = useState("");
-  const [currentLikes, setCurrentLikes] = useState(0);
 
   const handleSearch = async (newQuery) => {
     setQuery(newQuery);
